@@ -1,0 +1,12 @@
+check the image and containes first:
+$ docker images
+$ docker ps -all
+
+Build the image from the docker file:
+$ docker build -f Dockerfile. -t coupon-app-image .
+
+Run image as a container:
+$ docker run -t --name coupon-app --link product_coupon_mysql:mysql -p 10555:8090 coupon-app-image 
+
+
+

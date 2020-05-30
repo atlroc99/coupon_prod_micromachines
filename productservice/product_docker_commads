@@ -1,0 +1,11 @@
+check the image and containes first:
+$ docker images
+$ docker ps -all
+
+Build the image from the docker file:
+$ docker -f Dockerfile. -t product-app-iamge .
+
+Run image as a container:
+$ docker run -t --name prod_app --link product_coupon_mysql:mysql --link coupon-app:coupon-app-image -p 10666:8091 prod-app-image
+
+
